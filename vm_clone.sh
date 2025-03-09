@@ -53,7 +53,7 @@ case "$1" in
     done
     ;;
     *)  # 如果输入的命令不是create或remove
-    echo "${0##*/} {create|remove} vm1 vm2 vm3 ... ..."  # 输出使用说明
+    echo "${0##*/} {create|remove} vm1 vm2 vm3 ... .."  # 输出使用说明
     ;;
 esac
 exit $?  # 退出脚本并返回状态码
