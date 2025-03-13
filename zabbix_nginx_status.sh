@@ -2,7 +2,9 @@
 # 接受脚本的第一个参数
 # 由于nginx的status状态太多，写为一个接受参数的key
 NGINX_COMMAND=$1
-CACHEFILE="/tmp/nginx_status.log"
+
+# 这个日志文件要归于zabbix用户，负责下面rm删除这个日志文件的时候没有权限，会报错的
+CACHEFILE="/tmp/nginx_status.log"    
 
 CMD="/usr/bin/curl http://127.0.0.1/nginx_status"
 
@@ -22,7 +24,7 @@ TIMENOW=$(date +%s)
 
 # 当前系统时间减去日志时间，推算，是否超过60秒，超过就立即重新生成，确保日志是拿到的是最新的数据
 if [  $[ $TIMENOW - $STATUS_TIME ]  -gt 60 ];then
-    rm -f $CACHEFILE
+    rm -f $CACHEFILE  # 要有归于zabbix用户的所属主，不然没权限删除
 fi
 
 if [ ! -f $CACHEFILE ];then
