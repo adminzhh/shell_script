@@ -23,7 +23,7 @@ MYSQL_PORT="3306"    # MySQL端口
     if [ "$IO_RUNNING" == "Yes" ] && [ "$SQL_RUNNING" == "Yes
 Replica" ]; then
         echo "OK: MySQL replication is running."
-        echo "OK: Replication delay is $SECONDS_BEHIND_MASTER seconds."
+        echo "OK: Replication delay is $SECONDS_BEHIND_MASTER seconds"
     else
         echo "CRITICAL: MySQL replication is not running. IO: $IO_RUNNING, SQL: $SQL_RUNNING"
     fi
