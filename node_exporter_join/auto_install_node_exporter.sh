@@ -2,7 +2,7 @@
 
 # 配置参数
 USER="root"
-PASSWORD="Zkbr@2020!@.."
+PASSWORD="****"
 TAR_FILE="node_exporter-1.8.2.tar.gz"
 IP_FILE="ip.txt"
 REMOTE_DIR="/tmp"
