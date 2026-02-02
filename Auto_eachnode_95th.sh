@@ -283,7 +283,7 @@ send_to_dingtalk() {
     message+="🕐 数据月份: <font color=\\\"#FF0001\\\">$YEAR</font>年<font color=\\\"#FF0001\\\">$MONTH</font>月\\n\\n"
     message+="🕐 完成时间: <font color=\\\"#FF0001\\\">$END_TIME</font>\\n\\n"
     message+="⏰ 执行时长: <font color=\\\"#FF0001\\\">$DURATION</font>\\n\\n"
-    message+=" @156231485126"
+    message+=" @156***5126"
     
     # 构建JSON数据
     local json_data=$(cat <<EOF
@@ -295,7 +295,7 @@ send_to_dingtalk() {
     },
     "at": {
         "atMobiles": [
-            "156231485126"
+            "156***85126"
         ],
         "isAtAll": false
     }
